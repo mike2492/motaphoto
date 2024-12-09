@@ -17,6 +17,7 @@
 	</div><!-- #content -->
 
 	<?php get_template_part( 'template-parts/footer/footer-widgets' ); ?>
+    <?php require('templates_part/modal.php'); ?>
 
 	<footer id="colophon" class="site-footer">
 
