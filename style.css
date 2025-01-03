@@ -216,3 +216,29 @@ Version: 0.1.0
 .arrows > a > img{
     outline: none !important;
 }
+
+.third-title{
+    font-family: "space_monoregular";
+    font-size: 18px;
+    text-transform: uppercase;
+}
+
+.liste-photos{
+    display: flex;
+    justify-content: space-between;
+}
+
+.bloc-photo{
+    width: 44vw;
+    height: 495px;
+}
+
+.bloc-photo > a{
+    display: flex;
+    height: 100%;
+}
+
+.bloc-photo > a > img{
+    height: 100% !important;
+    object-fit: cover;
+}

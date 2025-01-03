@@ -26,6 +26,20 @@ $args3 = array(
     'order' => 'ASC',
 );
 $q3 = new WP_Query($args3);
+$args4 = array(
+    'post_type' => 'photo',
+    'posts_per_page' => 2,
+    'post__not_in' => array($post->ID),
+    'orderby' => 'rand',
+    'tax_query' => array(
+        array(
+            'taxonomy' => $categorie[0]->taxonomy,
+            'field' => 'slug',
+            'terms' => $categorie[0]->name,
+        ),
+    ),
+);
+$photos = new WP_Query($args4);
 ?>
 
 <?php if($single->have_posts()): ?>
@@ -98,6 +112,16 @@ $q3 = new WP_Query($args3);
         </div>
     </div>
 </div>
+
+<h3 class="third-title">Vous aimerez aussi</h3>
+
+<?php if($photos->have_posts()): ?>
+    <div class="liste-photos">
+        <?php while($photos->have_posts()) : $photos->the_post(); ?>
+            <?= get_template_part('templates_part/photo_block'); ?>
+        <?php endwhile; ?>
+    </div>
+<?php endif; ?>
 
 <?php
 get_footer();
