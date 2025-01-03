@@ -251,3 +251,9 @@ Version: 0.1.0
     height: 100% !important;
     object-fit: cover;
 }
+
+.liste-hero{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
