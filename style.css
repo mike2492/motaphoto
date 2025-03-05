@@ -287,3 +287,12 @@ Version:      0.1.0 */
     top: 10px;
     right: 10px;
 }
+
+.hero{
+    height: 962px;
+}
+
+.hero > img{
+    height: 100% !important;
+    object-fit: cover;
+}
