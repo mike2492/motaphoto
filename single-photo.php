@@ -23,6 +23,16 @@ $next = new WP_Query([
     'posts_per_page' => 1,
     'order' => 'ASC',
 ]);
+$photos = new WP_Query([
+    'post_type' => 'photo',
+    'posts_per_page' => 2,
+    'post__not_in' => [$post->ID],
+    'tax_query' => [
+        'taxonomy' => $categorie[0]->taxonomy,
+        'field' => 'slug',
+        'terms' => $categorie[0]->name,
+    ],
+]);
 ?>
 
 <?php if($single->have_posts()): ?>
@@ -95,6 +105,16 @@ $next = new WP_Query([
         </div>
     </div>
 </div>
+
+<h3 class="third-title">Vous aimerez aussi</h3>
+
+<?php if($photos->have_posts()): ?>
+    <div class="liste-photos">
+        <?php while($photos->have_posts()) : $photos->the_post(); ?>
+            <?= get_template_part('templates_part/photo_block'); ?>
+        <?php endwhile; ?>
+    </div>
+<?php endif; ?>
 
 <?php
 get_footer();
