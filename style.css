@@ -52,6 +52,18 @@ Version:      0.1.0 */
     text-transform: uppercase;
 }
 
+.photo-infos > h2{
+    font-size: 66px;
+    font-family: "space_monoitalic";
+    text-transform: uppercase;
+}
+
+.photo-infos > p{
+    font-size: 14px;
+    font-family: "space_monoregular";
+    text-transform: uppercase;
+}
+
 /* The Modal (background) */
 .modal {
     display: none; /* Hidden by default */
@@ -110,4 +122,89 @@ Version:      0.1.0 */
     background-color: #D8D8D8 !important;
     color: black !important;
     border: none !important;
+}
+
+.single{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 0px !important;
+}
+
+.photo-infos{
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    width: 43vw;
+}
+
+.photo{
+    width: 43vw;
+    height: 844px;
+}
+
+.photo > img{
+    height: 100% !important;
+    object-fit: cover;
+}
+
+.bottom-bar{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    height: 118px;
+    border-bottom: 1px solid black;
+    margin-top: 0px !important;
+}
+
+.bottom-contact{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 43vw;
+    border-top: 1px solid black;
+}
+
+.bottom-contact > p{
+    font-size: 14px;
+    font-family: "poppinslight";
+}
+
+.btn-contact-2{
+    font-size: 12px;
+    font-family: "space_monoregular";
+    width: 272px;
+    height: 50px;
+    background-color: #D8D8D8 !important;
+    color: black !important;
+    border: none;
+}
+
+.bottom-navigation{
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: end;
+    width: 43vw;
+}
+
+.prevImg, .nextImg, .currentImg{
+    width: 81px;
+    height: 71px;
+    display: none;
+    object-fit: cover;
+}
+
+.arrows{
+    display: flex;
+    justify-content: space-between;
+    width: 81px;
+}
+
+.arrows > a{
+    background: none !important;
+}
+
+.arrows > a > img{
+    outline: none !important;
 }
