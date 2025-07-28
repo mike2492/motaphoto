@@ -10,13 +10,15 @@
  * @subpackage Twenty_Twenty_One
  * @since Twenty Twenty-One 1.0
  */
-
 ?>
+
+
 			</main><!-- #main -->
 		</div><!-- #primary -->
 	</div><!-- #content -->
-
+	
 	<?php get_template_part( 'template-parts/footer/footer-widgets' ); ?>
+	<?php require('templates-part/modal.php'); ?>
 
 	<footer id="colophon" class="site-footer">
 

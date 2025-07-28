@@ -6,3 +6,113 @@ Author URI:   https://wpmarmite.com
 Template:     twentytwentyone
 Version:      0.1.0 
 */
+
+/* Fonts */
+@font-face {
+    font-family: 'space_monoregular';
+    src: url('fonts/spacemono-regular-webfont.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'space_monoitalic';
+    src: url('fonts/spacemono-italic-webfont.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'poppinslight';
+    src: url('fonts/poppins-light-webfont.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'poppinsmedium';
+    src: url('fonts/poppins-light-webfont.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Global */
+.primary-navigation .primary-menu-container > ul > .menu-item > a, .footer-navigation-wrapper li a{
+    font-family: "space_monoregular";
+    font-size: 16px;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 45%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button */
+.close-btn {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close-btn:hover,
+.close-btn:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.wpcf7 form{
+    display: flex !important;
+    justify-content: center;
+}
+
+.uacf7-row{
+    flex-direction: column;
+}
+
+.uacf7-row > label{
+    font-family: 'poppinsmedium';
+    font-size: 12px;
+    text-transform: uppercase;
+}
+
+.uacf7-col-6{
+    padding: 0 !important;
+}
+
+.btn-envoyer{
+    font-family: 'space_monoregular' !important;
+    font-size: 12px !important;
+    background-color: #D8D8D8 !important;
+    border: none !important;
+    color: black !important;
+}
+
+/* Responsive Design */
+@media only screen and (min-width: 360px) and (max-width: 767px){
+    .footer-navigation-wrapper{
+        flex-direction: column;
+        align-items: center;
+    }
+}
